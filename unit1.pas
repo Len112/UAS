@@ -214,7 +214,7 @@ Begin
   begin
     for x:=1 to image1.Width do
     begin
-      if bitmapGray3[x,y] > 100 then
+      if bitmapGray3[x,y] > 178 then
       begin
         bitmapBiner3[x,y] := 255;
         bitmapBiner3[x,y] := 255;
