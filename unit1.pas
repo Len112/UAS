@@ -41,12 +41,13 @@ type
     procedure Grayscale();
     Procedure Biner();
     Procedure HighpassFiltering();
-    Procedure DeteksiTepiKananAtas();
-    Procedure DeteksiTepiKananBawah();
+    Procedure DeteksiTepiDiagonalKiri();
+    Procedure DeteksiTepiDiagonalKanan();
     Procedure Invers();
     Procedure AritmatikaOr();
     Procedure Dislasi();
     Procedure Erosi();
+    procedure Label2Click(Sender: TObject);
     Procedure LowpassFiltering();
     Procedure AritmatikaPerkalian();
     procedure TampilkanResult();
@@ -159,8 +160,8 @@ begin
    HighpassFiltering();
 
    // Image 2
-   DeteksiTepiKananAtas();
-   DeteksiTepiKananBawah();
+   DeteksiTepiDiagonalKiri();
+   DeteksiTepiDiagonalKanan();
 
    // Image 3
    Biner();
@@ -210,20 +211,16 @@ Procedure TForm1.Biner();
 var
   x,y :Integer;
 Begin
-  for y:=1 to image1.Height do
+  for y:=1 to image3.Height do
   begin
-    for x:=1 to image1.Width do
+    for x:=1 to image3.Width do
     begin
       if bitmapGray3[x,y] > 178 then
       begin
         bitmapBiner3[x,y] := 255;
-        bitmapBiner3[x,y] := 255;
-        bitmapBiner3[x,y] := 255;
       end
       else
       begin
-        bitmapBiner3[x,y] := 0;
-        bitmapBiner3[x,y] := 0;
         bitmapBiner3[x,y] := 0;
        end;
     end;
@@ -234,9 +231,9 @@ procedure TForm1.Invers();
 var
   x,y :Integer;
 Begin
-  for y:=1 to image1.Height do
+  for y:=1 to image3.Height do
   begin
-    for x:=1 to image1.Width do
+    for x:=1 to image3.Width do
     begin
       bitmapInvert3[x,y] := 255 - bitmapBiner3[x,y];
     end;
@@ -323,7 +320,8 @@ Begin
   end;
 end;
 
-Procedure TForm1.DeteksiTepiKananAtas();
+
+Procedure TForm1.DeteksiTepiDiagonalKiri();
 var
    xKernel, yKernel, x, y, m, n: integer;
    total : integer;
@@ -363,7 +361,7 @@ Begin
   end;
 end;
 
-Procedure TForm1.DeteksiTepiKananBawah();
+Procedure TForm1.DeteksiTepiDiagonalKanan();
 var
    xKernel, yKernel, x, y, m, n: integer;
    total : integer;
@@ -465,6 +463,11 @@ Begin
       bitmapErosi3[xKernel, yKernel] := total;
     end;
   end;
+end;
+
+procedure TForm1.Label2Click(Sender: TObject);
+begin
+
 end;
 
 Procedure TForm1.AritmatikaOR();

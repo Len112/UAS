@@ -1,56 +1,55 @@
 object Form1: TForm1
-  Left = 550
-  Height = 940
-  Top = 22
-  Width = 1058
+  Left = 216
+  Height = 599
+  Top = 30
+  Width = 846
   Caption = 'Form1'
-  ClientHeight = 940
-  ClientWidth = 1058
-  DesignTimePPI = 120
+  ClientHeight = 599
+  ClientWidth = 846
   OnShow = FormShow
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.0.6.0'
   object ScrollBox1: TScrollBox
-    Left = 16
-    Height = 824
-    Top = 72
-    Width = 1012
-    HorzScrollBar.Page = 980
-    VertScrollBar.Page = 812
+    Left = 13
+    Height = 461
+    Top = 88
+    Width = 809
+    HorzScrollBar.Page = 805
+    VertScrollBar.Page = 417
     Anchors = [akTop, akLeft, akRight, akBottom]
-    ClientHeight = 820
-    ClientWidth = 1008
+    ClientHeight = 440
+    ClientWidth = 805
     ParentFont = False
     TabOrder = 0
     object Image1: TImage
-      Left = 16
+      Left = 13
       Height = 300
-      Top = 104
+      Top = 83
       Width = 300
       AutoSize = True
     end
     object Image2: TImage
-      Left = 344
+      Left = 336
       Height = 300
-      Top = 104
+      Top = 83
       Width = 300
       AutoSize = True
     end
     object ImageHasil: TImage
-      Left = 16
+      Left = 1016
       Height = 300
-      Top = 512
+      Top = 88
       Width = 300
       AutoSize = True
     end
     object LabelImage1: TLabel
-      Left = 112
-      Height = 32
-      Top = 56
-      Width = 99
+      Left = 90
+      Height = 25
+      Top = 45
+      Width = 77
       Caption = 'IMAGE 1'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -59,14 +58,14 @@ object Form1: TForm1
       ParentFont = False
     end
     object LabelImage2: TLabel
-      Left = 440
-      Height = 32
-      Top = 56
-      Width = 99
+      Left = 352
+      Height = 25
+      Top = 45
+      Width = 77
       Caption = 'IMAGE 2'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -75,14 +74,14 @@ object Form1: TForm1
       ParentFont = False
     end
     object LabelResult: TLabel
-      Left = 128
-      Height = 32
-      Top = 472
-      Width = 70
+      Left = 1160
+      Height = 25
+      Top = 48
+      Width = 54
       Caption = 'Result'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -91,41 +90,42 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 472
-      Height = 25
-      Top = 432
-      Width = 42
+      Left = 416
+      Height = 15
+      Top = 400
+      Width = 28
       Caption = '.bmp'
       ParentColor = False
       ParentFont = False
+      OnClick = Label2Click
     end
     object Label3: TLabel
-      Left = 120
-      Height = 25
-      Top = 422
-      Width = 42
+      Left = 96
+      Height = 15
+      Top = 400
+      Width = 28
       Caption = '.bmp'
       ParentColor = False
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 8
-      Height = 25
-      Top = 8
-      Width = 266
+      Left = 6
+      Height = 15
+      Top = 6
+      Width = 177
       Caption = '*Ukuran kedua image harus sama'
       ParentColor = False
       ParentFont = False
     end
     object ButtonLoad2: TButton
-      Left = 360
-      Height = 31
-      Top = 424
-      Width = 94
+      Left = 336
+      Height = 25
+      Top = 390
+      Width = 75
       Caption = 'Load 2'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -136,13 +136,13 @@ object Form1: TForm1
     end
     object ButtonLoad1: TButton
       Left = 16
-      Height = 31
-      Top = 416
-      Width = 94
+      Height = 25
+      Top = 392
+      Width = 75
       Caption = 'Load 1'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -152,14 +152,14 @@ object Form1: TForm1
       TabOrder = 1
     end
     object ButtonSave: TButton
-      Left = 480
-      Height = 31
-      Top = 768
-      Width = 94
+      Left = 1096
+      Height = 25
+      Top = 392
+      Width = 75
       Caption = 'Save'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -169,14 +169,14 @@ object Form1: TForm1
       TabOrder = 2
     end
     object ButtonConvert: TButton
-      Left = 360
-      Height = 31
-      Top = 768
-      Width = 94
+      Left = 1016
+      Height = 25
+      Top = 392
+      Width = 75
       Caption = 'Convert'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -186,30 +186,30 @@ object Form1: TForm1
       TabOrder = 3
     end
     object Label5: TLabel
-      Left = 800
-      Height = 25
-      Top = 430
-      Width = 42
+      Left = 744
+      Height = 15
+      Top = 400
+      Width = 28
       Caption = '.bmp'
       ParentColor = False
       ParentFont = False
     end
     object Image3: TImage
-      Left = 680
+      Left = 672
       Height = 300
-      Top = 104
+      Top = 83
       Width = 300
       AutoSize = True
     end
     object LabelImage3: TLabel
       Left = 776
-      Height = 32
-      Top = 56
-      Width = 99
+      Height = 25
+      Top = 48
+      Width = 77
       Caption = 'IMAGE 3'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -24
+      Font.Height = -19
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -218,14 +218,14 @@ object Form1: TForm1
       ParentFont = False
     end
     object ButtonLoad3: TButton
-      Left = 688
-      Height = 31
-      Top = 426
-      Width = 94
+      Left = 672
+      Height = 25
+      Top = 390
+      Width = 75
       Caption = 'Load 3'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -16
+      Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Pitch = fpVariable
       Font.Quality = fqDraft
@@ -236,16 +236,16 @@ object Form1: TForm1
     end
   end
   object Label1: TLabel
-    Left = 248
-    Height = 64
-    Top = 32
-    Width = 498
+    Left = 464
+    Height = 0
+    Top = 24
+    Width = 398
     Anchors = [akTop, akLeft, akRight, akBottom]
     AutoSize = False
     Caption = 'Convert Image to Batik Ornament'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -30
+    Font.Height = -24
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -254,15 +254,15 @@ object Form1: TForm1
     ParentFont = False
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    Left = 20
-    Top = 16374
+    left = 16
+    top = 13099
   end
   object OpenPictureDialog2: TOpenPictureDialog
-    Left = 140
-    Top = 16374
+    left = 112
+    top = 13099
   end
   object SavePictureDialog1: TSavePictureDialog
-    Left = 96
-    Top = 40
+    left = 77
+    top = 32
   end
 end
